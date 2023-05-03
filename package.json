@@ -1,5 +1,5 @@
 {
-  "name": "yarn-berry-workspace",
+  "name": "wanted-preonboarding",
   "packageManager": "yarn@3.5.1",
   "private": true,
   "workspaces": [
