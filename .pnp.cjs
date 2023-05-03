@@ -20,15 +20,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:apps/wanted"\
       },\
       {\
-        "name": "lib",\
+        "name": "@wanted/lib",\
         "reference": "workspace:packages/lib"\
       }\
     ],\
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
+      ["@wanted/lib", ["workspace:packages/lib"]],\
       ["@wanted/web", ["workspace:apps/wanted"]],\
-      ["lib", ["workspace:packages/lib"]],\
       ["wanted-preonboarding", ["workspace:."]]\
     ],\
     "fallbackPool": [\
@@ -561,6 +561,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@wanted/lib", [\
+        ["workspace:packages/lib", {\
+          "packageLocation": "./packages/lib/",\
+          "packageDependencies": [\
+            ["@wanted/lib", "workspace:packages/lib"],\
+            ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
       ["@wanted/web", [\
         ["workspace:apps/wanted", {\
           "packageLocation": "./apps/wanted/",\
@@ -569,6 +579,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:18.16.3"],\
             ["@types/react", "npm:18.2.0"],\
             ["@types/react-dom", "npm:18.2.1"],\
+            ["@wanted/lib", "workspace:packages/lib"],\
             ["autoprefixer", "virtual:10b895c0713a06797eefe92131f42861469a5fa17bde2d4291c0159efa49335accabb4f0407a51744c9df57564b9fc122535fc81c2cbe79a87d531a7de73fe31#npm:10.4.14"],\
             ["eslint", "npm:8.39.0"],\
             ["eslint-config-next", "virtual:10b895c0713a06797eefe92131f42861469a5fa17bde2d4291c0159efa49335accabb4f0407a51744c9df57564b9fc122535fc81c2cbe79a87d531a7de73fe31#npm:13.3.4"],\
@@ -3063,16 +3074,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["type-check", "npm:0.4.0"]\
           ],\
           "linkType": "HARD"\
-        }]\
-      ]],\
-      ["lib", [\
-        ["workspace:packages/lib", {\
-          "packageLocation": "./packages/lib/",\
-          "packageDependencies": [\
-            ["lib", "workspace:packages/lib"],\
-            ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"]\
-          ],\
-          "linkType": "SOFT"\
         }]\
       ]],\
       ["lilconfig", [\

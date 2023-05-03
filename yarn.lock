@@ -417,6 +417,14 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@wanted/lib@workspace:^, @wanted/lib@workspace:packages/lib":
+  version: 0.0.0-use.local
+  resolution: "@wanted/lib@workspace:packages/lib"
+  dependencies:
+    typescript: ^5.0.4
+  languageName: unknown
+  linkType: soft
+
 "@wanted/web@workspace:apps/wanted":
   version: 0.0.0-use.local
   resolution: "@wanted/web@workspace:apps/wanted"
@@ -424,6 +432,7 @@ __metadata:
     "@types/node": 18.16.3
     "@types/react": 18.2.0
     "@types/react-dom": 18.2.1
+    "@wanted/lib": "workspace:^"
     autoprefixer: 10.4.14
     eslint: 8.39.0
     eslint-config-next: 13.3.4
@@ -2504,14 +2513,6 @@ __metadata:
   checksum: 12c5021c859bd0f5248561bf139121f0358285ec545ebf48bb3d346820d5c61a4309535c7f387ed7d84361cf821e124ce346c6b7cef8ee09a67c1473b46d0fc4
   languageName: node
   linkType: hard
-
-"lib@workspace:packages/lib":
-  version: 0.0.0-use.local
-  resolution: "lib@workspace:packages/lib"
-  dependencies:
-    typescript: ^5.0.4
-  languageName: unknown
-  linkType: soft
 
 "lilconfig@npm:^2.0.5, lilconfig@npm:^2.1.0":
   version: 2.1.0
