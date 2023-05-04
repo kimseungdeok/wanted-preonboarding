@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import { Inter } from 'next/font/google';
 import { sayHello } from '@wanted/lib';
+import { Inter } from 'next/font/google';
+import Image from 'next/image';
 
 const inter = Inter({ subsets: ['latin'] });
 
