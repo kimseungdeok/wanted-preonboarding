@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import { sayHello } from '@wanted/lib'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,6 +31,10 @@ export default function Home() {
               priority
             />
           </a>
+          <p>
+            의존성 테스트&nbsp;
+            <code className="font-mono font-bold">{sayHello()}</code>
+          </p>
         </div>
       </div>
 
