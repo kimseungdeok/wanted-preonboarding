@@ -1,7 +1,7 @@
 import { sayHello } from '@wanted/lib';
+import { Button } from '@wanted/ui';
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
-
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
@@ -25,6 +25,7 @@ export default function Home() {
             의존성 테스트&nbsp;
             <code className="font-mono font-bold">{sayHello()}</code>
           </p>
+          <Button>hello from @wanted/ui</Button>
         </div>
       </div>
 
